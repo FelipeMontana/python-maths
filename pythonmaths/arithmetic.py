@@ -107,3 +107,39 @@ def subtract(x: int | float, y: int | float) -> float:
         2.5
     """
     return x - y
+
+def square_root(x):
+    """Return the square root of a number.
+
+    Parameters
+    ==========
+    x : int | float
+        The number for which you wish to find the square root.
+
+    Returns
+    =======
+    float
+        The square root of x.
+
+    Examples
+    ========
+    >>> from python_math import arithmetic
+    >>> arithmetic.square_root(4)
+        2.0
+    >>> arithmetic.square_root(169)
+        13.0
+    """
+    return x ** (1 / 2)
+
+@pytest.mark.parametrize(
+    ("x", "target"),
+    [
+        pytest.mark(4, 2, id="square root of 4"),
+        pytest.mark(9, 3.0, id="square root of 9"),
+        pytest.mark(25, 5.0, id="square root of 25"),
+        pytest.mark(2, 1.4142135623730951, id="square root of 2"),
+    ],
+)
+def test_square_root(x: int | float, target: int | float) -> None:
+    """Test the square_root() function."""
+    assert pytest.approx(arithmetic.square_root(x), target)
