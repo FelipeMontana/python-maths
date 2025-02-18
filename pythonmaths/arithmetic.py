@@ -134,5 +134,7 @@ def square_root(x):
     >>> arithmetic.square_root(169)
         13.0
     """
+    if x < 0:
+        print("WARNING : you have supplied a negative number, the square roof is complex.")
     return x ** (1 / 2)
 
