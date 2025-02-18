@@ -132,3 +132,9 @@ dmypy.json
 # Emacs tmp files
 \#*
 *~
+
+# Update .gitignore
+.DS_Store
+*.csv
+*.pkl
+*.RData
