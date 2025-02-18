@@ -132,3 +132,9 @@ dmypy.json
 # Emacs tmp files
 \#*
 *~
+
+# Other files
+*.RData
+*.csv
+*.pkl
+*.DS_Store
